@@ -1,5 +1,5 @@
 class Notifier < ActionMailer::Base
-  default :from => 'notifier@headlok.com'
+  default :from => 'no-reply@sphinx.com'
 
   def security_notice(email)
     mail( :to => email,

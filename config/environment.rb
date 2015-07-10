@@ -5,8 +5,8 @@ require File.expand_path('../application', __FILE__)
 HeadlokRails::Application.initialize!
 
 ActionMailer::Base.smtp_settings = {
-  :user_name => 'sabar@chesscademy.com',
-  :password => 'hardcodingisfornoobs',
+  :user_name => ENV['SENDGRID_USN'],
+  :password => ENV['SENDGRID_PASS'],
   :domain => 'heroku.com',
   :address => 'smtp.sendgrid.net',
   :port => 587,
